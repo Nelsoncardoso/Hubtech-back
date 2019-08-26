@@ -15,7 +15,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params.merge(user: current_user))
     if @task.save
-      render json: @task, status: :created
+      render json: @task, status: :ok
     else
       render json: @task.errors, status: :unprocessable_entity
     end
@@ -23,7 +23,7 @@ class TasksController < ApplicationController
 
   def destroy
     if @task.soft_delete
-      render json: :no_content, status: :created
+      render json: :no_content, status: :ok
     else
       render json: :no_content, status: :unprocessable_entity
     end
@@ -31,7 +31,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      render json: @task, status: :updated
+      render json: @task, status: :ok
     else
       render json: @task.errors, status: :unprocessable_entity
     end

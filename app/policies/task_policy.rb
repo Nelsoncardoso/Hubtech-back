@@ -11,7 +11,7 @@ class TaskPolicy < ApplicationPolicy
     true
   end
 
-  def update
+  def update?
     record.user == user
   end
 
