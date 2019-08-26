@@ -1,4 +1,4 @@
-* ## Teste Hubtec - Sistema para criação de tarefas (Backend)
+* ## Teste Hubtec - Sistema para criação de tarefas (Frontend)
 
   #####  System dependencies
 
@@ -7,18 +7,16 @@
 
   #####  Plataformas
   
-  - Ruby on Rails
+  - Reactjs
 
   #####  Instalação e Utilização
 
-  Backend
+  Frontend
 
      ```
-     cd Hubtech-back
+     cd Hubtech-front
      
-     docker-compose run --rm app bundle install
-     
-     docker-compose run --rm app bundle exec rails db:create db:migrate db:seed
+     docker build -t sample:dev .
      
      docker-compose up
      ```
