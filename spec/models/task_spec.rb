@@ -10,9 +10,9 @@ RSpec.describe Task, type: :model do
   end
   
   describe 'Validations' do
-    context 'title' do
+    context 'name' do
         it 'should not be blank' do
-            @task.title = nil
+            @task.name = nil
             expect(@task).to_not be_valid
         end
     end

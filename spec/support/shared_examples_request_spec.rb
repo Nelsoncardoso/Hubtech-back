@@ -11,6 +11,6 @@ shared_examples_for :deny_without_authorization do |method_type, action, params 
             delete action
         end
 
-        expect(response.status).to eql(302)
+        expect(response.status).to eql(401)
     end
 end

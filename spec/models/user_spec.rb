@@ -13,12 +13,6 @@ RSpec.describe User, type: :model do
   
   describe 'Validations' do
     context 'email' do
-        it 'should be unique' do
-            user_repeated = FactoryBot.create(:user)
-            user_repeated.email = @user.email
-            expect(user_repeated).to_not be_valid
-        end
-
         it 'should not be blank' do
             user_repeated = FactoryBot.create(:user)
             user_repeated.email = nil
